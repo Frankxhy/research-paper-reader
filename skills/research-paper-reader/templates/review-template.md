@@ -1,4 +1,4 @@
-# Paper Reading Report — Universal SOP 
+# Paper Reading Report — Universal SOP
 
 > **Usage:** Output template for **one paper read independently by one model**. Answer every question relevant to the paper, with substantive analysis rather than headings alone. Follow SOP Steps 1–8 exactly. This is not a multi-model comparison template.
 >
@@ -13,6 +13,8 @@
 - **Source materials actually read:** [Sections, pages, supplements, figures; note missing material]
 - **Analysis model/version:** [Only when reliably known]
 - **Scope and access limitations:** [Any limitations]
+
+**Evidence reference style:** Use exact source pointers alongside important claims (e.g., Section heading, p. X, Fig. Y, Table Z, Eq. N, or named theorem when genuinely present). If unable to verify a locator, mark it **Not verified**. Keep original units, evaluation settings, and assumptions.
 
 ## Phase 1 — Initial Understanding
 
@@ -150,4 +152,15 @@
 
 **Corrections / uncertainties:** [What should not be stated as established fact.]
 
-> End of the standalone Paper Reading Report. Multi-model comparison belongs to the separate Paper Report Comparator skill.
+## Report Quality Gate (check before delivery; do not replace the analysis)
+
+- [ ] **Complete:** Eight SOP steps appear in order; important applicable questions are answered substantively.
+- [ ] **Detailed where it matters:** Methodology explains how the research works; Evidence & Results explains what each decisive result demonstrates; Critical Analysis explains why strengths and weaknesses matter.
+- [ ] **Grounded:** Core contributions, key results, material assumptions, and evidence-based critiques have precise, verified source pointers or a visible **Not verified** qualification.
+- [ ] **Faithful:** Numerical values, conditions, units, quotes, proof statements, and attribution have not been invented or distorted.
+- [ ] **Critical but fair:** Author claims are separate from observed evidence and independent critique; speculative concerns are identified as such.
+- [ ] **Type appropriate:** No irrelevant requirement for experiments, baselines, diagrams, statistics, or code.
+- [ ] **Coherent:** No redundant filler, contradictions, or external model-comparison sections.
+- [ ] **Transparent:** Source access limitations and unresolved questions are disclosed.
+
+> End of the standalone Paper Reading Report. Combining multiple independent reports is handled by the separate Paper Report Synthesizer skill, which must produce this same report format.

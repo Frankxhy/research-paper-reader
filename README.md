@@ -1,4 +1,4 @@
-# Research Paper Reader — Universal Research Paper Reading SOP v2.0
+# Research Paper Reader — Universal Research Paper Reading SOP 
 
 Two modular Agent Skills with a **single shared final report format**. Skill 1 reads a paper. Skill 2 takes multiple independent Skill 1 reports and outputs **one stronger Skill 1-format report**.
 
@@ -8,16 +8,16 @@ Two modular Agent Skills with a **single shared final report format**. Skill 1 r
 research-paper-reader/
 ├── README.md
 └── skills/
-    ├── research-paper-reader/
-    │   ├── SKILL.md
-    │   ├── templates/
-    │   │   └── review-template.md           # Shared final report format
-    │   └── references/
-    │       └── evaluation-checklist.md
-    └── paper-report-synthesizer/
-        ├── SKILL.md
-        └── references/
-            └── synthesis-checklist.md       # Internal only
+ ├── research-paper-reader/
+ │ ├── SKILL.md
+ │ ├── templates/
+ │ │ └── review-template.md # Shared final report format
+ │ └── references/
+ │ └── evaluation-checklist.md
+ └── paper-report-synthesizer/
+ ├── SKILL.md
+ └── references/
+ └── synthesis-checklist.md # Internal only
 ```
 
 ## Skill 1 — [Research Paper Reader](skills/research-paper-reader/SKILL.md) (PRIMARY)
@@ -26,7 +26,7 @@ research-paper-reader/
 
 **Output:** One standalone [Paper Reading Report](skills/research-paper-reader/templates/review-template.md).
 
-Runs the first three phases of SOP v2.0:
+Runs the first three phases of SOP :
 
 - Phase 1: **Step 1 Overview, Step 2 Background & Motivation, Step 3 Contributions & Novelty**
 - Phase 2: **Step 4 Research Approach & Methodology, Step 5 Evidence & Results, Step 6 Discussion & Limitations**

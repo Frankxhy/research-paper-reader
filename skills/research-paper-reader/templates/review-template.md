@@ -152,7 +152,7 @@
 
 **Corrections / uncertainties:** [What should not be stated as established fact.]
 
-## Report Quality Gate (check before delivery; do not replace the analysis)
+<!-- INTERNAL QUALITY GATE: Apply before delivery. Do not reproduce this checklist or its heading in the final Paper Reading Report.
 
 - [ ] **Complete:** Eight SOP steps appear in order; important applicable questions are answered substantively.
 - [ ] **Detailed where it matters:** Methodology explains how the research works; Evidence & Results explains what each decisive result demonstrates; Critical Analysis explains why strengths and weaknesses matter.
@@ -162,5 +162,7 @@
 - [ ] **Type appropriate:** No irrelevant requirement for experiments, baselines, diagrams, statistics, or code.
 - [ ] **Coherent:** No redundant filler, contradictions, or external model-comparison sections.
 - [ ] **Transparent:** Source access limitations and unresolved questions are disclosed.
+
+-->
 
 > End of the standalone Paper Reading Report. Combining multiple independent reports is handled by the separate Paper Report Synthesizer skill, which must produce this same report format.

@@ -1,229 +1,153 @@
-# Universal Research Paper Review Template (v0.2)
+# Paper Reading Report — Universal SOP v2.0
 
-> **Purpose:** A detailed, reusable structure for reading and critically evaluating research papers across disciplines. Fill in only what the paper actually supports. Replace bracketed prompts with your own analysis; do not leave prompts as findings. This is a **review output template**, not a claim that the paper has been analyzed.
+> **Usage:** Output template for **one paper read independently by one model**. Answer every question relevant to the paper, with substantive analysis rather than headings alone. Follow SOP v2.0 Steps 1–8 exactly. This is not a multi-model comparison template.
 >
-> **Adaptation:** For theoretical, qualitative, conceptual, empirical, systems, or review papers, use the relevant evidence types. Mark non-applicable subsections **N/A (reason)** instead of inventing experiments, datasets, baselines, equations, architecture, or statistics.
->
-> **Grounding:** For major paper-specific claims, provide precise section/page/figure/table/equation locations. Distinguish **author claims**, **observed evidence**, **your interpretation**, and **independent critique**. Mark anything not checked against the paper as **Unverified**.
+> Provide exact original-paper locations (section/page/figure/table/equation) for important claims whenever accessible. Distinguish **[Author claim]**, **[Paper evidence]**, **[Interpretation]**, and **[Independent critique]**. If evidence is absent or inaccessible, write **Not verified**, not a plausible-sounding answer. Mark non-applicable prompts **N/A (reason)**.
 
-## Paper metadata
+## Report metadata
 
-| Field | Information |
-| --- | --- |
-| Title | [Exact title] |
-| Authors | [Names] |
-| Year and venue | [As stated in source, or unknown] |
-| Paper version / DOI / URL | [Exact version used] |
-| Research discipline and type | [e.g., experimental / empirical / theoretical / qualitative / conceptual / survey / systems / mixed] |
-| Reviewer objective | [Understand / assess / compare / prepare literature review] |
-| Materials consulted | [Main text, supplement, code, cited works; list only material actually accessed] |
-| Review date | [Date] |
+- **Paper title:** [Exact title]
+- **Authors / year / venue:** [Known bibliographic details]
+- **Source/version:** [DOI, URL, PDF version, or provided document]
+- **Research type:** [Experimental, empirical, theoretical, qualitative, conceptual, survey, systems, mixed, etc.]
+- **Source materials actually read:** [Sections, pages, supplements, figures; note missing material]
+- **Analysis model/version:** [Only when reliably known]
+- **Scope and access limitations:** [Any limitations]
 
-## 1. Overview — What is this paper about?
+## Phase 1 — Initial Understanding
 
-### 1.1 One-paragraph summary
-[In 100–200 words, explain the problem, approach, main findings, and take-home message **in your own words**. Cite relevant locations.]
+### Step 1 — Overview
 
-### 1.2 Research question and objective
-- **Research question:** [What specific question is asked?]
-- **Objective:** [What outcome or understanding do the authors pursue?]
-- **Scope:** [What is explicitly within and outside the investigation?]
-- **Key terms:** [Define central terms as used in this paper, not assumed general definitions.]
+**1.1 Research problem:** What precise question/problem does the paper address? What is and is not in scope?
 
-### 1.3 Main conclusion
-[State what the authors conclude. Distinguish their conclusion from what you think is actually established by the evidence.]
+**1.2 Importance:** Why is the problem meaningful, and for whom?
 
-### 1.4 Open comprehension questions
-[What remains unclear after the first pass? Which sections require closer reading?]
+**1.3 Central idea:** Explain the authors' high-level approach without prematurely evaluating it.
 
-## 2. Background, Motivation, and Research Gap
+**1.4 Main conclusions:** Summarize the major conclusions, separating the authors' statements from what has actually been demonstrated.
 
-### 2.1 Context
-[What prior concepts, literature, or real-world phenomena are necessary to understand the paper?]
+**1.5 In-your-own-words summary:** Write a concise but complete overview explaining the problem → approach → evidence → conclusion.
 
-### 2.2 Existing approaches or knowledge
-[What do the authors say is already known or practiced? Cite their related-work discussion.]
+**1.6 Questions for deeper reading:** Note ambiguities or unfamiliar terms requiring attention.
 
-### 2.3 Stated limitations of prior work
-[Which shortcomings do the authors claim to address? Keep **author framing** separate from independently validated limitations.]
+### Step 2 — Background & Motivation
 
-### 2.4 Motivation and significance
-[Why should the question matter theoretically, practically, or methodologically? Is its importance convincingly established?]
+**2.1 Research context:** What discipline, literature, or real-world setting motivates the study?
 
-### 2.5 Prerequisites requiring clarification
-[List concepts, definitions, tools, or cited papers worth learning before deeper analysis.]
+**2.2 Existing research:** Which prior approaches or findings do the authors rely on?
 
-## 3. Contributions and Novelty
+**2.3 Research gap:** What shortcomings, inconsistencies, or missing evidence do the authors identify?
 
-### 3.1 Explicit contribution claims
-| # | Author-stated contribution (paraphrase) | Where stated | Claimed novelty compared with | Initial assessment |
+**2.4 Motivation:** Why is a new study needed, according to the authors? Is that rationale plausible?
+
+**2.5 Prerequisites:** Explain key terminology, assumptions, and background concepts needed to understand the paper.
+
+**2.6 Limits of verification:** Which statements about prior research come only from the paper, rather than independent review of referenced works?
+
+### Step 3 — Contributions & Novelty
+
+**3.1 Claimed contributions:** List each contribution individually in the authors' own framing, paraphrased.
+
+| Claimed contribution | Exact source location | Claimed difference from prior work | Supporting evidence | Initial assessment |
 | --- | --- | --- | --- | --- |
-| 1 | [Claim] | [Section/page] | [Prior work/comparator] | [Supported / unclear / not yet checked] |
-| 2 | [Claim] | [Section/page] | [Prior work/comparator] | [Supported / unclear / not yet checked] |
+| [Contribution] | [Location] | [Comparison] | [Location] | [Supported/partial/unverified] |
 
-### 3.2 Type of contribution
-[Examples: a new empirical finding, theoretical result, conceptual framework, dataset, method, system, synthesis, or refinement. Include only relevant types.]
+**3.2 Contribution types:** New technique, theory, observation, proof, system, method, dataset, synthesis, conceptual insight, or other?
 
-### 3.3 Novelty versus demonstrated value
-[Which aspects seem new? What evidence establishes novelty? Does usefulness or correctness necessarily follow from the novelty claim?]
+**3.3 What is actually new?** Distinguish genuinely demonstrated advances from rebranding, incremental variation, or unverified priority claims, as evidence permits.
 
-### 3.4 Contribution-to-evidence mapping
-[For each significant contribution, identify the result, proof, argument, case, or observation that supports it.]
+**3.4 Novelty confidence:** What further literature comparison would be needed to validate novelty?
 
-## 4. Research Approach and Methodology
+## Phase 2 — Deep Understanding
 
-### 4.1 Overall research design
-[What kind of study is it, and what are its stages? Explain the high-level logic from question to method to result.]
+### Step 4 — Research Approach & Methodology
 
-### 4.2 Inputs, materials, and assumptions
-[As relevant: data, participants, datasets, texts, instruments, definitions, models, axioms, settings, or premises. Note selection criteria and assumptions.]
+**4.1 Research design:** What overall approach is used and why does it fit the question?
 
-### 4.3 Methods and procedure
-[Walk through the key methods in enough detail to understand and evaluate the research. Identify what the authors actually did versus your own reconstruction.]
+**4.2 Procedure:** Explain the research process in a reproducible conceptual sequence, using actual source detail.
 
-### 4.4 Critical design choices
-[Why were key choices made? What alternatives were possible? Are those choices defended?]
+**4.3 Materials and assumptions:** Include relevant data, participants, instruments, formal assumptions, theoretical premises, texts, models, or technical resources.
 
-### 4.5 Figures, tables, equations, and examples (if present)
-| Evidence object | What it depicts or states | Why it matters | Question / concern |
+**4.4 Key mechanisms:** Describe the essential algorithms, proofs, analytical methods, qualitative procedures, or argument structure, depending on paper type.
+
+**4.5 Design rationale and alternatives:** Why are central choices made? Which alternatives or tradeoffs are discussed?
+
+**4.6 Important visual and formal material (if present):** Explain consequential figures, tables, diagrams, equations, and examples and their role. Do **not** presume architecture diagrams or experiments.
+
+**4.7 Methodological fit and uncertainty:** Is the methodology sufficient for answering the research question? What details remain unclear?
+
+### Step 5 — Evidence & Results
+
+**5.1 Evidence type:** What evidence exists: measurements, experiment results, proofs, qualitative observations, cases, conceptual arguments, literature synthesis, etc.?
+
+**5.2 Evaluation approach:** What comparisons, formal checks, metrics, baselines, sampling, coding, validation procedures, or inferential methods are used **where applicable**?
+
+**5.3 Key results:** For each important finding, explain what was observed or established, with the paper's exact source.
+
+| Finding / proposition | Evidence location | What the evidence establishes | Uncertainty / caveat |
 | --- | --- | --- | --- |
-| [Figure/Table/Equation/Example] | [Meaning] | [Role in reasoning] | [Unclear point] |
+| [Finding] | [Figure/table/section/proof] | [Grounded interpretation] | [Qualification] |
 
-### 4.6 Methodological fit
-[Does the method genuinely address the research question? Where might assumptions, design choices, or measurement introduce limitations?]
+**5.4 Does the evidence support the claims?** Evaluate whether the authors infer more than their evidence permits.
 
-## 5. Evidence, Results, and Argumentation
+**5.5 Additional verification:** Identify weakly supported findings, alternative explanations, counterexamples, missing checks, and needed robustness analyses.
 
-### 5.1 Nature of the evidence
-[Choose what applies: experiments, observations, qualitative themes, mathematical proofs, conceptual arguments, simulations, case studies, literature synthesis, etc.]
+**5.6 Null, negative, or conflicting outcomes:** Record meaningful exceptions if reported.
 
-### 5.2 Evaluation or validation design
-[If applicable, describe sampling, controls, comparisons, baselines, metrics, coding procedures, proof strategy, inclusion criteria, or validation approach. Do not demand irrelevant experimental machinery.]
+### Step 6 — Discussion & Limitations
 
-### 5.3 Main findings
-| Finding or proposition | Supporting evidence/location | What the evidence actually shows | Qualification or uncertainty |
+**6.1 Authors' interpretation:** How do the authors make sense of their findings?
+
+**6.2 Acknowledged limitations:** What limitations do the authors explicitly identify? Cite them.
+
+**6.3 Additional potential limitations:** Independently assess missing assumptions, omitted populations, confounding, scope restrictions, weaknesses in proof, or interpretive uncertainties, as applicable.
+
+**6.4 Generalizability and boundaries:** Which settings, definitions, populations, or assumptions constrain the results?
+
+**6.5 Future work:** What questions follow from the paper's results and limitations? Separate author suggestions from your own.
+
+## Phase 3 — Critical Evaluation
+
+### Step 7 — Critical Analysis
+
+**7.1 Significance:** Is the problem relevant, meaningful, and well posed?
+
+**7.2 Novelty:** Do the stated contributions represent a substantive advance based on available evidence?
+
+**7.3 Methodological rigor:** Are methods and assumptions appropriate, transparent, and sufficiently justified?
+
+**7.4 Evidentiary strength:** Are proofs, results, observations, or arguments adequate for the principal conclusions?
+
+**7.5 Logical issues and bias:** What alternative interpretations, conflicts, confounders, unsupported assumptions, selection effects, or reasoning gaps could matter?
+
+**7.6 Main strengths:** List the 2–5 most important strengths, giving specific reasoning and paper evidence for each.
+
+**7.7 Main weaknesses:** List the 2–5 most important weaknesses, distinguishing demonstrated defects from reasonable concerns.
+
+**7.8 Questions for the authors:** Propose 2–5 specific substantive questions.
+
+### Step 8 — Overall Assessment
+
+**8.1 Greatest value:** What is the single most important contribution or insight?
+
+**8.2 Confidence:** How credible are the principal conclusions and why?
+
+**8.3 Field impact:** What might this work change or contribute to its field, given the evidence?
+
+**8.4 Open questions:** What still needs to be established?
+
+**8.5 What was learned:** What technical, conceptual, or methodological lessons emerge from reading it?
+
+**8.6 Final assessment:** Provide a concise, balanced and independent judgment, with important qualifications.
+
+## Claim-to-Evidence Audit (required)
+
+| Important statement in this report | Type: author claim / evidence / interpretation / independent critique | Exact paper location | Verified status / limitation |
 | --- | --- | --- | --- |
-| [Finding 1] | [Table/figure/proof/section] | [Grounded interpretation] | [Caveat] |
-| [Finding 2] | [Table/figure/proof/section] | [Grounded interpretation] | [Caveat] |
+| [Statement] | [Type] | [Section/page/figure/etc.] | [Supported / partial / not verified] |
 
-### 5.4 Strength of inference
-[Do the results substantiate the stated claims? Are there alternative explanations, unresolved assumptions, counterexamples, confounders, or interpretive ambiguities?]
+**Reading limitations:** [Unavailable supplements, unclear PDF material, unverified novelty, inaccessible content.]
 
-### 5.5 Robustness and reproducibility (when relevant)
-[Discuss uncertainty, sensitivity analyses, replication, independent corroboration, proof checking, auditability, code/data availability, or transferability depending on study type.]
+**Corrections / uncertainties:** [What should not be stated as established fact.]
 
-### 5.6 Surprising or contradictory evidence
-[Record negative, null, anomalous, or conflicting findings, if any.]
-
-## 6. Discussion, Scope, and Limitations
-
-### 6.1 Authors' interpretation
-[How do the authors interpret their findings? Is the interpretation narrower or broader than the evidence?]
-
-### 6.2 Limitations explicitly acknowledged
-[Extract and cite limitations the authors admit.]
-
-### 6.3 Additional limitations identified by the reviewer
-[Provide your own critique, explaining the rationale and evidence. Do not present speculation as established error.]
-
-### 6.4 Generalizability / applicability / boundary conditions
-[Under which conditions should the conclusions hold? What settings, populations, domains, or assumptions fall outside that scope?]
-
-### 6.5 Ethical, practical, or societal considerations (if relevant)
-[Only when grounded and materially relevant.]
-
-## 7. Critical Evaluation
-
-### 7.1 Strengths
-For each strength, state **what it is, why it matters, and supporting evidence**.
-- **Strength 1:** [Observation + rationale + location]
-- **Strength 2:** [Observation + rationale + location]
-- **Strength 3:** [Optional]
-
-### 7.2 Weaknesses
-For each weakness, state **the issue, evidence, likely consequence, and whether it is confirmed or hypothetical**.
-- **Weakness 1:** [Issue + basis + consequence]
-- **Weakness 2:** [Issue + basis + consequence]
-- **Weakness 3:** [Optional]
-
-### 7.3 Rigor and credibility
-[Assess clarity of the question, methodological fit, quality of evidence, soundness of reasoning, proportionality of conclusions, and transparency. Tailor criteria to the paper type.]
-
-### 7.4 Novelty and significance reassessed
-[After reading the whole paper, how convincing are the contribution and significance claims? Distinguish validation from the authors' own assertions.]
-
-### 7.5 Questions to the authors
-[Write 2–5 substantive, answerable questions about assumptions, missing evidence, design tradeoffs, implications, or interpretation.]
-
-## 8. Overall Assessment and Next Steps
-
-### 8.1 Balanced judgment
-[Summarize the paper's strongest idea, strongest evidence, biggest limitation, and bottom-line assessment in a short paragraph.]
-
-### 8.2 Confidence and remaining uncertainty
-[What can be concluded confidently? What would require source verification, a replication, external literature, or additional information?]
-
-### 8.3 Lessons learned
-[What new concept, methodological approach, or perspective did this paper teach you?]
-
-### 8.4 Future directions
-[Propose promising follow-up research, improvements, or tests; distinguish your suggestions from the authors'.]
-
-## 9. Evidence Audit
-
-Use the original paper to check every substantive conclusion before finalizing.
-
-| Review claim | Status (author claim / evidence / interpretation / critique / unverified) | Exact source location | Verification result / caveat |
-| --- | --- | --- | --- |
-| [Claim] | [Status] | [Section/page/figure/table/equation] | [Supported / partially supported / unsupported / not checked] |
-
-**Source access limits:** [List any missing pages, supplements, illegible figures, unavailable references, or inaccessible data.]
-
-**Corrections made after checking:** [Identify errors, overclaims, or mistaken interpretations that were revised.]
-
----
-
-# Optional Appendix A — LLM Usage and Verification Report
-
-Use this appendix when AI assistance was part of the task, especially when documenting the review process separately.
-
-## A1. Tools, models, and inputs
-| Model / tool | Version (if known) | Paper/materials supplied | Role | Date |
-| --- | --- | --- | --- | --- |
-| [Model A] | [Version] | [Inputs] | [Explain / analyze / verify] | [Date] |
-| [Model B, only if actually used] | [Version] | [Inputs] | [Independent comparison] | [Date] |
-
-## A2. Workflow and prompts
-[Document the order of independent human reading, AI-supported explanation, critical analysis, source checking, and final synthesis. Include representative prompts or exact prompt transcripts where useful.]
-
-## A3. How output was evaluated
-[State explicit checks: source citation tracing, verifying data/proof details, checking omissions, challenging unsupported claims, and independent re-reading.]
-
-## A4. Multi-model comparison (if actually performed)
-| Topic | Model A output | Model B output | Paper evidence | Your resolution |
-| --- | --- | --- | --- | --- |
-| Contributions | [Summary] | [Summary] | [Location] | [Adjudication] |
-| Methodology | [Summary] | [Summary] | [Location] | [Adjudication] |
-| Findings | [Summary] | [Summary] | [Location] | [Adjudication] |
-| Limitations | [Summary] | [Summary] | [Location] | [Adjudication] |
-
-[If only one model was used, state that clearly. Model agreement alone does not prove correctness.]
-
-## A5. Observed errors and limitations
-[Describe concrete hallucinations, omissions, misreadings, overconfident claims, or failure cases that actually occurred.]
-
-## A6. Human contribution and reflection
-[Which insights did you develop independently? What did the LLM help you understand? What did you reject or revise? How did this affect your review?]
-
----
-
-# Completion checklist
-
-- [ ] Paper identity/version and actual materials consulted are recorded.
-- [ ] Research question, contributions, method, and findings are explained in the reviewer's words.
-- [ ] Evidence type is appropriate to this paper; non-applicable prompts are marked N/A.
-- [ ] Important claims are traceable to precise paper locations.
-- [ ] Author claims, observations, interpretations, and independent critique are distinguished.
-- [ ] Strengths and weaknesses are specific, fair, and justified.
-- [ ] Uncertainties and inaccessible evidence are disclosed.
-- [ ] If AI was used, the report describes **actual** tools, prompts, checks, and human decisions.
+> End of the standalone Paper Reading Report. Multi-model comparison belongs to the separate Paper Report Comparator skill.

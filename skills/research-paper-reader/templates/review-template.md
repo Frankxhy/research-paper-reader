@@ -1,6 +1,6 @@
-# Paper Reading Report — Universal SOP v2.0
+# Paper Reading Report — Universal SOP 
 
-> **Usage:** Output template for **one paper read independently by one model**. Answer every question relevant to the paper, with substantive analysis rather than headings alone. Follow SOP v2.0 Steps 1–8 exactly. This is not a multi-model comparison template.
+> **Usage:** Output template for **one paper read independently by one model**. Answer every question relevant to the paper, with substantive analysis rather than headings alone. Follow SOP Steps 1–8 exactly. This is not a multi-model comparison template.
 >
 > Provide exact original-paper locations (section/page/figure/table/equation) for important claims whenever accessible. Distinguish **[Author claim]**, **[Paper evidence]**, **[Interpretation]**, and **[Independent critique]**. If evidence is absent or inaccessible, write **Not verified**, not a plausible-sounding answer. Mark non-applicable prompts **N/A (reason)**.
 

@@ -1,9 +1,9 @@
 ---
 name: research-paper-reader
-description: Independently read and critically evaluate a single academic research paper, regardless of discipline or research design, and generate a detailed evidence-grounded Paper Reading Report using Universal Research Paper Reading SOP v2.0 steps 1–8. Use when given a paper/PDF/full text to understand or review. Do not compare LLMs or synthesize multiple model reports.
+description: Independently read and critically evaluate a single academic research paper, regardless of discipline or research design, and generate a detailed evidence-grounded Paper Reading Report using Universal Research Paper Reading SOP steps 1–8. Use when given a paper/PDF/full text to understand or review. Do not compare LLMs or synthesize multiple model reports.
 ---
 
-# Research Paper Reader — Universal Research Paper Reading SOP v2.0
+# Research Paper Reader — Universal Research Paper Reading SOP 
 
 ## Purpose and scope
 

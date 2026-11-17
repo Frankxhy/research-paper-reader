@@ -1,60 +1,132 @@
 ---
 name: research-paper-reader
-description: Read, understand, critically evaluate, and review academic research papers across disciplines using a staged, evidence-grounded workflow. Use when a user supplies a research paper or asks for structured paper reading, scholarly critique, or verification of paper-related claims.
+description: Independently read and critically evaluate a single academic research paper, regardless of discipline or research design, and generate a detailed evidence-grounded Paper Reading Report using Universal Research Paper Reading SOP v2.0 steps 1–8. Use when given a paper/PDF/full text to understand or review. Do not compare LLMs or synthesize multiple model reports.
 ---
 
-# Research Paper Reader
+# Research Paper Reader — Universal Research Paper Reading SOP v2.0
 
-Use this skill for any scholarly paper, including empirical, experimental, theoretical, conceptual, qualitative, systematic-review, and systems research. Adapt questions to the paper's actual research design. Never assume every paper has experiments, datasets, models, architecture diagrams, or quantitative metrics.
+## Purpose and scope
 
-## Operating principles
+Read **one** research paper comprehensively and produce **one** standalone, detailed, traceable **Paper Reading Report**. This skill is designed to be run independently by different models with the **same paper and standardized report format**. It must never assume that another model's output exists or attempt multi-model comparison.
 
-1. **Source first.** Obtain the actual paper (and supplement if available). If not accessible, ask for it or clearly label any provisional response. Do not pretend to have read missing material.
-2. **Distinguish evidence.** Mark statements as `[Author claim]`, `[Evidence]`, `[Interpretation]`, `[Independent critique]`, or `[Unverified]` when ambiguity matters.
-3. **Traceability.** Attach precise page/section/figure/table/equation references to material paper-specific claims when available. Never fabricate locations, quotations, data, or citations.
-4. **Human agency.** Support the reader's understanding and judgment. Do not present the agent's review as the reader's independent evaluation.
-5. **Flexible depth.** Begin with a fast pass; deepen only relevant sections or uncertainties. If a phase does not apply, explain why and skip it.
-6. **Visual and mathematical evidence.** Inspect figures, tables, equations, appendices, and supplements when relevant; do not rely solely on extracted text.
-7. **Uncertainty.** Separate unclear writing, missing evidence, and your own limited understanding. Do not equate disagreement with error.
+Applicable to empirical, experimental, theoretical, mathematical, qualitative, conceptual, computational, survey/review, and mixed-methods papers. Adapt questions to the study type. A paper without experiments does not fail for lacking benchmarks, and one without figures does not fail for lacking architecture diagrams.
 
-## Workflow
+**Read** `templates/review-template.md` when it is accessible; follow its eight sections and evidence audit. Its placeholders are questions to answer, not a license to fabricate details.
 
-### Phase 0 — Intake and research-type classification
-- Record title, authors, year, venue (if given), source version, and research type. Do not guess missing metadata.
-- Determine the user's objective: learn, explain, critique, compare, or draft a review.
-- Identify the paper's evidence type: empirical, theoretical, qualitative, conceptual, synthesis, or mixed.
+## Required principles
 
-### Phase 1 — Initial understanding
-1. **Overview:** Read abstract, introduction, and conclusion where present. State research question, goal, high-level approach, main claimed findings, and what remains unclear.
-2. **Background & motivation:** Identify necessary concepts, prior approaches, research gap, and motivation. Distinguish authors' framing of prior work from externally verified consensus.
-3. **Contributions & novelty:** Enumerate claimed contributions, their evidence, and the comparator/baseline on which novelty depends. Do not automatically endorse novelty.
-4. **Orientation through evidence objects:** Scan key tables, figures, equations, examples, or exhibits *if present*. Explain their roles without assuming a system architecture.
+1. **Read the actual source.** Use the full paper whenever available. If a section, figure, appendix, supplement, or PDF page cannot be accessed, explicitly describe the limitation. Never claim to have inspected inaccessible material.
+2. **Source-ground every important observation.** Cite exact page/section/figure/table/equation where possible. Never fabricate quotation, numbers, sources, or citation locations.
+3. **Distinguish four things:** what authors claim, evidence the paper presents, your interpretation, and your criticism. Author-stated novelty is not proven novelty.
+4. **Independence:** Do not consult, cite, imitate, or infer other model reports. Do not use multi-model voting or consensus.
+5. **Discipline neutrality:** Select evidence standards appropriate to the paper; do not force experiments, baselines, code, datasets, or architecture descriptions on every research genre.
+6. **Depth over volume:** Provide enough technical and evidentiary detail to evaluate the argument, without redundant paraphrases. Explain essential specialized concepts.
+7. **Honest uncertainty:** Mark unsupported or unverified claims. If external prior-work validation was not performed, state that novelty judgments rely on the paper's own framing.
+8. **Author versus reviewer:** Clearly mark your independent critique, including limitations absent from the authors' discussion.
+9. **No invention of LLM activities:** This skill generates only its own analysis. A separate comparison skill handles independent reports from other models.
 
-### Phase 2 — Deep understanding
-5. **Research approach & methodology:** Explain the research design, process, definitions, assumptions, materials, data, methods, and methodological fit. Read deeply where needed.
-6. **Evidence & results:** Identify which results, proofs, qualitative observations, arguments, or synthesis findings support each major claim. Examine relevant uncertainty, robustness, limitations, and alternative explanations.
-7. **Discussion & limitations:** Extract author-acknowledged limitations, assess potential overlooked limitations, applicability, and plausible next questions.
+## Input
 
-### Phase 3 — Critical evaluation
-8. **Evaluate rigor:** Examine question significance, validity of design, evidentiary sufficiency, logical consistency, interpretation, potential confounding/bias, and reproducibility or auditability as applicable.
-9. **Overall assessment:** State strongest contributions, key weaknesses, confidence in major conclusions, open questions, and possible future directions. Avoid unsupported accept/reject recommendations.
+- Required: one paper's PDF, full text, or reliably accessible paper source.
+- Optional: user objective (learning, detailed critique, literature review), discipline, desired depth, supplementary materials.
+- If only an abstract is available, label the output **abstract-only preliminary analysis**, and do not claim a full reading.
 
-### Phase 4 — Verification and synthesis
-10. **Evidence audit:** Verify important claims directly against the paper and flag ungrounded or misattributed statements. Provide a claim-to-evidence table.
-11. **Optional multi-model comparison:** If other independent model outputs are supplied or accessible, apply the same questions to each, compare differences, then adjudicate using the paper. Never invent a second model's output or claim independence when none exists.
-12. **Synthesis:** Prepare the user's requested deliverable. Clearly distinguish paper summary, critical review, and reflection on LLM assistance.
+## SOP — Phase 1: Initial Understanding
 
-## Interaction protocol
+### Step 1 — Overview
+Answer:
+- What research problem does the paper address?
+- Why is the problem important?
+- What is the authors' central idea?
+- What are the main conclusions?
 
-- Default to presenting a concise roadmap and Phase 1 findings first. Ask whether to deepen specific areas only when necessary; otherwise proceed for a full review request.
-- For difficult concepts, give a plain-language explanation followed by a technical interpretation, tied to the actual paper.
-- For each substantive analytical conclusion, provide `Claim | Paper evidence | Assessment | Confidence/uncertainty` where useful.
-- If a claim cannot be verified, write `Not verified from the supplied paper` and identify what's needed.
-- If working with PDFs, inspect embedded visuals when they are important and available; admit when not viewable.
-- For model comparisons, use the protocol in `references/model-comparison.md`.
-- Use the quality checklist in `references/evaluation-checklist.md`.
-- Use `templates/review-template.md` only when a full written review is requested; it is not a mandatory output for every reading task.
+Read the abstract, introduction, conclusion, and other key orientation material where available. Summarize the paper in your own words. Record open questions.
 
-## Deliverables
+### Step 2 — Background & Motivation
+Answer:
+- What is the research background or context?
+- What limitations or gaps in existing research are discussed?
+- Why did the authors pursue this work?
+- What prior knowledge is needed to understand it?
 
-A full paper review should cover the research problem, background, contributions, approach, evidence/results, strengths, weaknesses, open questions, and overall assessment. A separate LLM-usage report can document prompts, model identities, verification decisions, errors detected, and what the human reader independently concluded. Be transparent about what was actually done.
+Explain prerequisite concepts and cited background accurately. Distinguish the authors' portrayal of prior work from independent confirmation.
+
+### Step 3 — Contributions & Novelty
+Answer:
+- What contributions do the authors explicitly claim?
+- How do these differ from earlier work?
+- Are they a new method, discovery, framework, empirical insight, or improvement?
+- Is there enough evidence to support the novelty claims?
+
+Trace each claimed contribution to its location and supporting evidence. Distinguish perceived novelty from verified novelty.
+
+## SOP — Phase 2: Deep Understanding
+
+### Step 4 — Research Approach & Methodology
+Answer:
+- Which research methods are used?
+- How is the research designed and executed?
+- What technologies, data, concepts, theories, definitions, or assumptions are central?
+- Why was this approach selected?
+- Is the method appropriate for the stated problem?
+
+Explain mechanisms, assumptions, choices, and relevant equations/figures/tables/examples **if present**. Do not require a system architecture.
+
+### Step 5 — Evidence & Results
+Answer:
+- What evidence does the paper provide?
+- What are the major results?
+- Do these results support the conclusions?
+- Which results need additional checking?
+- For nonexperimental papers, how do arguments, formal proofs, conceptual analysis, qualitative evidence, or synthesis support the claims?
+
+Tie every important result to an observable source location. Discuss relevant uncertainty and competing explanations. Separate evidence from interpretation.
+
+### Step 6 — Discussion & Limitations
+Answer:
+- How do the authors interpret the results?
+- What limitations do the authors acknowledge?
+- What plausible limitations remain unaddressed?
+- How transferable or generalizable are the conclusions?
+- What follow-up questions or research directions arise?
+
+Do not assert hypothetical weaknesses as established failures.
+
+## SOP — Phase 3: Critical Evaluation
+
+### Step 7 — Critical Analysis
+Answer:
+- Is the research question important and well-formed?
+- Are the contributions genuinely novel, to the extent verifiable?
+- Is the methodology sound and rigorous?
+- Is the evidence sufficient and reliable?
+- Are there logical gaps, bias, confounders, unreasonable premises, or alternative interpretations?
+- What are the paper's **most significant strengths and weaknesses**, and why?
+
+For every major critique, cite the relevant source or clearly label a reasoned inference. Use `references/evaluation-checklist.md` where available.
+
+### Step 8 — Overall Assessment
+Answer:
+- What is the paper's greatest value?
+- How credible are its conclusions?
+- How does it contribute to the field?
+- Which questions remain open?
+- What did the reader learn from the work?
+
+Give an intellectually independent, balanced assessment; identify strengths, limitations, unresolved uncertainty, and promising directions.
+
+## Required output — Paper Reading Report
+
+Produce all eight numbered sections from `templates/review-template.md` in order; complete the claim-to-evidence audit. Use **N/A + reason** for a non-applicable question, and **Not verified** for unsupported statements. The report must be self-contained enough that a second model can compare it without relying on conversational context.
+
+Report metadata should include paper title/authors/version, evidence accessed, scope limitations, and model name **only if reliably known**. Do not embed a multi-model comparison or fabricated model-evaluation narrative in the report.
+
+## Explicit exclusions
+
+- No running or comparing multiple models.
+- No cross-model consensus, rankings, or adjudication.
+- No final synthesis across reports.
+- No invented additional references or source evidence.
+- Do not automatically generate a separate LLM usage report.
+
+For comparison of independently generated reports, use the distinct `skills/paper-report-comparator/SKILL.md` skill.

@@ -1,6 +1,6 @@
 # Research Paper Reader — Universal Research Paper Reading SOP v2.0
 
-Two independent, consistently organized Agent Skills for paper analysis. **Skill 1 is the primary skill.** Skill 2 is optional and only consumes reports from Skill 1.
+Two modular Agent Skills with a **single shared final report format**. Skill 1 reads a paper. Skill 2 takes multiple independent Skill 1 reports and outputs **one stronger Skill 1-format report**.
 
 ## Repository layout
 
@@ -11,51 +11,53 @@ research-paper-reader/
     ├── research-paper-reader/
     │   ├── SKILL.md
     │   ├── templates/
-    │   │   └── review-template.md
+    │   │   └── review-template.md           # Shared final report format
     │   └── references/
     │       └── evaluation-checklist.md
-    └── paper-report-comparator/
+    └── paper-report-synthesizer/
         ├── SKILL.md
-        ├── templates/
-        │   └── comparison-template.md
         └── references/
-            └── model-comparison.md
+            └── synthesis-checklist.md       # Internal only
 ```
 
 ## Skill 1 — [Research Paper Reader](skills/research-paper-reader/SKILL.md) (PRIMARY)
 
-**Input:** One research paper (PDF or full text).
+**Input:** One paper (PDF/full text).
 
-**Output:** A standalone, detailed, source-grounded **Paper Reading Report**, using the [full report template](skills/research-paper-reader/templates/review-template.md).
+**Output:** One standalone [Paper Reading Report](skills/research-paper-reader/templates/review-template.md).
 
-Follows Universal SOP v2.0 **Steps 1–8**:
+Runs the first three phases of SOP v2.0:
 
-- **Phase 1 — Initial Understanding:** Step 1 Overview; Step 2 Background & Motivation; Step 3 Contributions & Novelty.
-- **Phase 2 — Deep Understanding:** Step 4 Research Approach & Methodology; Step 5 Evidence & Results; Step 6 Discussion & Limitations.
-- **Phase 3 — Critical Evaluation:** Step 7 Critical Analysis; Step 8 Overall Assessment.
+- Phase 1: **Step 1 Overview, Step 2 Background & Motivation, Step 3 Contributions & Novelty**
+- Phase 2: **Step 4 Research Approach & Methodology, Step 5 Evidence & Results, Step 6 Discussion & Limitations**
+- Phase 3: **Step 7 Critical Analysis, Step 8 Overall Assessment**
 
-Adapts to experimental, theoretical, qualitative, conceptual, review, and other research styles. It does not require or compare other LLMs.
+Applicable to research papers across disciplines and research designs. No other model is required.
 
-## Skill 2 — [Paper Report Comparator](skills/paper-report-comparator/SKILL.md) (OPTIONAL)
+## Skill 2 — [Paper Report Synthesizer](skills/paper-report-synthesizer/SKILL.md) (OPTIONAL)
 
-**Input:** Two or more independent Paper Reading Reports for the same paper, preferably also the original paper.
+**Input:** Two or more independently generated reports using Skill 1, ideally with the original paper.
 
-**Output:** Cross-model comparison, evidence verification, and synthesis using its [comparison template](skills/paper-report-comparator/templates/comparison-template.md).
+**Output:** **One unified Paper Reading Report, identical in structure to Skill 1's output.**
 
-Follows **Phase 4 — LLM-Assisted Verification**, Steps 9–11: Multi-Model Analysis, Evidence Verification, Final Synthesis.
+Internally runs Phase 4 (Step 9 Multi-Model Analysis, Step 10 Evidence Verification, Step 11 Final Synthesis), but these steps **do not become sections of the deliverable**. It resolves differences, checks evidence, integrates useful perspectives, and presents the result as one coherent review.
+
+**No model-by-model breakdown, model ratings, comparison tables, or separate LLM usage report** appear in the final report. If the original paper is unavailable, source verification limitations must be disclosed in the same report's relevant sections.
+
+Both skills use [the same report template](skills/research-paper-reader/templates/review-template.md); Skill 2 explicitly references Skill 1's template rather than maintaining a divergent output structure.
 
 ## Example workflow
 
-1. Run Skill 1 independently on the same paper in Model A and Model B, producing Report A and Report B.
-2. Supply both reports and the original paper to Skill 2 to compare results and verify discrepancies.
-3. Review the final synthesis and record what each model contributed or missed.
+1. Give the same research paper to multiple models independently, each running Skill 1. Save their Paper Reading Reports.
+2. Give the reports and original paper to Skill 2.
+3. Receive **one** integrated Paper Reading Report with the same eight steps and evidence audit as any Skill 1 report.
 
-Only Step 1 is needed for single-paper reading.
+For a single model and paper, run Skill 1 only.
 
-## Installation
+## Installation notes
 
-Each directory under `skills/` is an independent Agent Skill with its own `SKILL.md`. Install the relevant skill directory according to your agent's instructions; a GitHub repository alone does not activate skills. Some clients require separate installation of the two skills.
+Each folder inside `skills/` contains an independent `SKILL.md`. To use Skill 2, ensure its environment can also access Skill 1's shared template (for example, by installing both skills together). GitHub hosting does not by itself install the skills.
 
 ## Status
 
-v0.3 — unified skill paths; further validation against varied paper types is recommended.
+v0.4 — unified report format and separate synthesis skill. Validate the primary reading skill on varied paper types and inspect source-grounding before relying on the synthesis.

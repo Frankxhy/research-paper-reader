@@ -9,7 +9,7 @@ description: Synthesize two or more independent Research Paper Reader reports fo
 
 **Many Skill 1 reports in; ONE Skill 1-format report out.** This is not a model evaluation deliverable.
 
-The final output must read like a single high-quality Paper Reading Report written by one reviewer. It must follow the same Universal Research Paper Reading SOP v2.0 **Steps 1–8**, headings, order, level of detail, and claim-to-evidence audit as the primary skill's template at `../research-paper-reader/templates/review-template.md`.
+The final output must read like a single high-quality Paper Reading Report written by one reviewer. It must follow the same Universal Research Paper Reading SOP **Steps 1–8**, headings, order, level of detail, and claim-to-evidence audit as the primary skill's template at `../research-paper-reader/templates/review-template.md`.
 
 Do not add a separate comparison, model ranking, voting, provenance ledger, LLM-reflection appendix, synthesis methodology section, or "what each model said." Keep the work of comparison internal.
 
@@ -21,7 +21,7 @@ Do not add a separate comparison, model ranking, voting, provenance ledger, LLM-
 
 Verify that all reports refer to the same paper/version. When they do not, flag the mismatch and only synthesize claims whose sources and context are adequately comparable.
 
-## Internal-only workflow (SOP v2.0 Steps 9–11)
+## Internal-only workflow (SOP Steps 9–11)
 
 ### Step 9 — Internal multi-report analysis
 1. Extract content from each report into the **eight common SOP sections** (Overview; Background & Motivation; Contributions & Novelty; Research Approach & Methodology; Evidence & Results; Discussion & Limitations; Critical Analysis; Overall Assessment).
@@ -46,7 +46,7 @@ Verify that all reports refer to the same paper/version. When they do not, flag 
 
 ## Mandatory final output contract
 
-**Exactly one** "Paper Reading Report — Universal SOP v2.0" with:
+**Exactly one** "Paper Reading Report — Universal SOP " with:
 
 - Report metadata (paper identification and access limitations; do not list contributing LLMs)
 - Phase 1: Step 1 Overview; Step 2 Background & Motivation; Step 3 Contributions & Novelty

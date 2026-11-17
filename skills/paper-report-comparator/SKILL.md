@@ -39,4 +39,4 @@ This **separate downstream skill** accepts 2+ reports independently generated us
 
 ## Output
 
-Follow `templates/comparison-template.md` when available. Produce (a) model comparison by SOP step, (b) disputed-claim verification table, (c) evidence-grounded final synthesis, and (d) short LLM workflow/reflection. Output may be provisional if the paper was not provided.
+Read `references/model-comparison.md` for the comparison protocol. Follow `templates/comparison-template.md` when available. Produce (a) model comparison by SOP step, (b) disputed-claim verification table, (c) evidence-grounded final synthesis, and (d) short LLM workflow/reflection. Output may be provisional if the paper was not provided.

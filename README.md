@@ -1,63 +1,61 @@
 # Research Paper Reader — Universal Research Paper Reading SOP v2.0
 
-Two **separate Agent Skills** for a modular, evidence-grounded research-paper workflow.
+Two independent, consistently organized Agent Skills for paper analysis. **Skill 1 is the primary skill.** Skill 2 is optional and only consumes reports from Skill 1.
 
-## Skill 1 — Research Paper Reader (PRIMARY)
-
-**Input:** One research paper (PDF/full text).
-
-**Output:** One complete, standalone **Paper Reading Report**.
-
-**SOP v2.0 — Steps 1–8:**
-
-- **Phase 1 — Initial Understanding:** 1. Overview; 2. Background & Motivation; 3. Contributions & Novelty.
-- **Phase 2 — Deep Understanding:** 4. Research Approach & Methodology; 5. Evidence & Results; 6. Discussion & Limitations.
-- **Phase 3 — Critical Evaluation:** 7. Critical Analysis; 8. Overall Assessment.
-
-The primary `SKILL.md` uses `templates/review-template.md` and `references/evaluation-checklist.md`. It works independently: no model comparisons, no cross-model synthesis, and no requirement for multiple LLMs. It adapts to experimental, theoretical, qualitative, conceptual, survey, and other research designs.
-
-## Skill 2 — Paper Report Comparator (OPTIONAL / DOWNSTREAM)
-
-**Input:** Two or more reports created independently by Skill 1, ideally alongside the source paper.
-
-**Output:** Comparison, verified adjudication of disagreements, and final synthesis.
-
-**SOP v2.0 — Steps 9–11:**
-
-- **Phase 4 — LLM-Assisted Verification:** 9. Multi-Model Analysis; 10. Evidence Verification; 11. Final Synthesis.
-
-This skill is defined in `skills/paper-report-comparator/SKILL.md` with its own template at `skills/paper-report-comparator/templates/comparison-template.md`.
-
-## Directory
+## Repository layout
 
 ```text
 research-paper-reader/
-├── SKILL.md                                  # Skill 1
 ├── README.md
-├── references/
-│   ├── evaluation-checklist.md               # Skill 1
-│   └── model-comparison.md                   # Reference for Skill 2
-├── templates/
-│   └── review-template.md                    # Skill 1 report structure
 └── skills/
+    ├── research-paper-reader/
+    │   ├── SKILL.md
+    │   ├── templates/
+    │   │   └── review-template.md
+    │   └── references/
+    │       └── evaluation-checklist.md
     └── paper-report-comparator/
-        ├── SKILL.md                          # Skill 2
-        └── templates/
-            └── comparison-template.md
+        ├── SKILL.md
+        ├── templates/
+        │   └── comparison-template.md
+        └── references/
+            └── model-comparison.md
 ```
 
-## Example use
+## Skill 1 — [Research Paper Reader](skills/research-paper-reader/SKILL.md) (PRIMARY)
 
-**Step A:** Give the same paper to Model A and Model B. Ask each independently to *“Use research-paper-reader and produce a complete Paper Reading Report following SOP v2.0.”*
+**Input:** One research paper (PDF or full text).
 
-**Step B:** Supply the two finished reports and the original paper to a model running *paper-report-comparator*. Ask it to compare both reports, verify discrepancies against the paper, and synthesize a final critical assessment.
+**Output:** A standalone, detailed, source-grounded **Paper Reading Report**, using the [full report template](skills/research-paper-reader/templates/review-template.md).
 
-Only Step A is required to use this repository's primary skill.
+Follows Universal SOP v2.0 **Steps 1–8**:
 
-## Installation notes
+- **Phase 1 — Initial Understanding:** Step 1 Overview; Step 2 Background & Motivation; Step 3 Contributions & Novelty.
+- **Phase 2 — Deep Understanding:** Step 4 Research Approach & Methodology; Step 5 Evidence & Results; Step 6 Discussion & Limitations.
+- **Phase 3 — Critical Evaluation:** Step 7 Critical Analysis; Step 8 Overall Assessment.
 
-Different Agent Skills-compatible applications use different install/discovery paths. The primary skill lives at repository root; the comparator is a separate nested skill directory. Some agents require installing each skill independently. GitHub hosting alone does not activate a skill.
+Adapts to experimental, theoretical, qualitative, conceptual, review, and other research styles. It does not require or compare other LLMs.
+
+## Skill 2 — [Paper Report Comparator](skills/paper-report-comparator/SKILL.md) (OPTIONAL)
+
+**Input:** Two or more independent Paper Reading Reports for the same paper, preferably also the original paper.
+
+**Output:** Cross-model comparison, evidence verification, and synthesis using its [comparison template](skills/paper-report-comparator/templates/comparison-template.md).
+
+Follows **Phase 4 — LLM-Assisted Verification**, Steps 9–11: Multi-Model Analysis, Evidence Verification, Final Synthesis.
+
+## Example workflow
+
+1. Run Skill 1 independently on the same paper in Model A and Model B, producing Report A and Report B.
+2. Supply both reports and the original paper to Skill 2 to compare results and verify discrepancies.
+3. Review the final synthesis and record what each model contributed or missed.
+
+Only Step 1 is needed for single-paper reading.
+
+## Installation
+
+Each directory under `skills/` is an independent Agent Skill with its own `SKILL.md`. Install the relevant skill directory according to your agent's instructions; a GitHub repository alone does not activate skills. Some clients require separate installation of the two skills.
 
 ## Status
 
-v0.2 modular architecture. Validate the single-paper skill on varied paper types before using model comparisons in a research deliverable.
+v0.3 — unified skill paths; further validation against varied paper types is recommended.

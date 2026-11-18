@@ -1,6 +1,6 @@
 # Research Paper Reader — Universal Research Paper Reading SOP
 
-Three modular Agent Skills separate **deep reading**, **multi-report synthesis**, and **concise academic writing**.
+Four modular Agent Skills separate **deep reading**, **multi-report synthesis**, **concise academic writing**, and **critical review of the written review**.
 
 ## Repository layout
 
@@ -19,12 +19,18 @@ research-paper-reader/
     │   ├── SKILL.md
     │   └── references/
     │       └── synthesis-checklist.md
-    └── academic-review-writer/
+    ├── academic-review-writer/
+    │   ├── SKILL.md
+    │   ├── templates/
+    │   │   └── academic-review-template.md
+    │   └── references/
+    │       └── writing-standards.md
+    └── academic-review-critic/
         ├── SKILL.md
         ├── templates/
-        │   └── academic-review-template.md
+        │   └── critique-template.md
         └── references/
-            └── writing-standards.md
+            └── review-rubric.md
 ```
 
 ## Skill 1 — [Research Paper Reader](skills/research-paper-reader/SKILL.md)
@@ -55,26 +61,34 @@ Internally compares evidence, resolves disagreements and integrates complementar
 
 Skill 3 prioritizes findings, removes duplication, preserves citations and important caveats, and turns structured reading notes into coherent academic prose. It does **not** independently read a new paper, merge multiple detailed reports, or invent support for claims. See [writing standards](skills/academic-review-writer/references/writing-standards.md).
 
+## Skill 4 — [Academic Review Critic](skills/academic-review-critic/SKILL.md)
+
+**Input:** A concise Skill 3 Academic Review. For stronger factual checking, also provide the corresponding Skill 1/2 detailed report and the original paper.
+
+**Output:** One [Academic Review Critique & Revision Plan](skills/academic-review-critic/templates/critique-template.md), not a rewritten paper review.
+
+Skill 4 evaluates evidence fidelity, coverage, methodological understanding, critical depth, citations, coherence, concision and academic writing quality using its [review rubric](skills/academic-review-critic/references/review-rubric.md). It identifies specific passages, prioritizes Critical/Major/Minor issues, and produces concrete revision instructions for Skill 3. The degree of verification must match the sources actually inspected.
+
 ## Workflows
 
 **Single-model workflow:**
 ```text
-Paper → Skill 1 (detailed eight-step report) → Skill 3 (concise academic review)
+Paper → Skill 1 (detailed eight-step report) → Skill 3 (concise review) → Skill 4 (critique)
 ```
 
 **Multi-model workflow:**
 ```text
 Paper → Skill 1 (model A) ─┐
-       → Skill 1 (model B) ├→ Skill 2 (unified detailed report) → Skill 3 (concise review)
+       → Skill 1 (model B) ├→ Skill 2 (unified detailed report) → Skill 3 (concise review) → Skill 4 (critique)
        → Skill 1 (model C) ┘
 ```
 
-Skill 2 is optional; Skill 3 can take a Skill 1 report directly. Preserve the intermediate detailed reports when you need a record of model analysis and original evidence.
+Skill 2 is optional; Skill 3 can take a Skill 1 report directly. Skill 4 reviews Skill 3's output and, when needed, produces targeted instructions for a revision in Skill 3. Preserve intermediate detailed reports to enable accurate cross-checking.
 
 ## Installation notes
 
-Each skill is housed under its own `skills/<skill-name>/SKILL.md`. Install or expose the folder to the agent environment you are using; simply hosting the files on GitHub does not install the skills. Skill 2's `../research-paper-reader/templates/review-template.md` relative reference requires a visible Skill 1 template when installed. Skill 3 carries its own template and writing standards and can run independently when a detailed report is supplied.
+Each skill is housed under its own `skills/<skill-name>/SKILL.md`. Install or expose the folder to the agent environment you are using; simply hosting the files on GitHub does not install the skills. Skill 2's `../research-paper-reader/templates/review-template.md` relative reference requires a visible Skill 1 template when installed. Skill 3 carries its own template and writing standards and can run independently when a detailed report is supplied. Skill 4 carries its own rubric and critique template; the Skill 3 output is its required input.
 
 ## Validation status
 
-All three skill specifications and relative references can be inspected in this repository. Practical end-to-end testing with a real paper and independent model outputs remains necessary.
+All four skill specifications and relative references can be inspected in this repository. Practical end-to-end testing with a real paper and independent model outputs remains necessary.

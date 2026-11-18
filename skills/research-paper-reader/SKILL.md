@@ -11,7 +11,7 @@ Read **one** research paper comprehensively and produce **one** standalone, deta
 
 Applicable to empirical, experimental, theoretical, mathematical, qualitative, conceptual, computational, survey/review, and mixed-methods papers. Adapt questions to the study type. A paper without experiments does not fail for lacking benchmarks, and one without figures does not fail for lacking architecture diagrams.
 
-**Read** `templates/review-template.md` when it is accessible; follow its eight sections and evidence audit. Its placeholders are questions to answer, not a license to fabricate details.
+**Read** `templates/review-template.md` and `references/reading-strategy.md` when accessible; follow the report template's eight sections and evidence audit. Its placeholders are questions to answer, not a license to fabricate details.
 
 ## Required principles
 
@@ -30,6 +30,21 @@ Applicable to empirical, experimental, theoretical, mathematical, qualitative, c
 - Required: one paper's PDF, full text, or reliably accessible paper source.
 - Optional: user objective (learning, detailed critique, literature review), discipline, desired depth, supplementary materials.
 - If only an abstract is available, label the output **abstract-only preliminary analysis**, and do not claim a full reading.
+
+## Internal reading execution — mandatory
+
+Before drafting the eight-step report, execute the **Three-Pass Reading** protocol in `references/reading-strategy.md`. This is the reading *process*, not an alternative report outline:
+
+1. **Pass 1 — Global orientation:** Survey abstract, introduction, conclusion, headings and important evidence objects as available. Establish a provisional question → approach → conclusion overview and uncertainties.
+2. **Pass 2 — Analytical reading:** Study key methodology, argumentation, evidence, results, and assumptions. Map the central contributions to supporting evidence and scope conditions.
+3. **Pass 3 — Critical reconstruction:** Rebuild and test the paper's reasoning; revisit pivotal sources; challenge unsupported inferences; verify important claims before the final report.
+
+During Passes 2–3, apply two required internal checks:
+
+- **Claim–Evidence Reasoning Chain:** For each central contribution, connect `Research Problem → Existing Limitation/Gap → Proposed Approach → Supporting Evidence → Warranted Conclusion`. Locate evidence for each link, identify weak or missing links, and avoid claiming novelty or causality beyond the source.
+- **Understanding Verification:** Test whether you can independently explain (a) the problem, (b) the mechanism or argument and its assumptions, (c) why the decisive evidence supports the result, (d) at least one meaningful boundary or alternative interpretation, and (e) outstanding uncertainty. If a check fails, return to relevant parts of the paper and try again. If the source remains unclear or inaccessible, qualify the final claims rather than inventing understanding.
+
+See `references/reading-strategy.md` for pass-level exit criteria, paper-type adaptations and the targeted re-reading procedure. **Do not append pass summaries, chain matrices, or comprehension-check transcripts to the report.** They serve the existing SOP Steps 1–8, and the final output still follows `templates/review-template.md` exactly.
 
 ## Analysis depth requirements
 
@@ -64,7 +79,8 @@ Use **precise, verifiable pointers into the actual paper**, preferably with a se
 The final report is ready only when all applicable checks pass:
 
 - **Coverage:** All eight SOP steps occur in order and answer their relevant questions; non-applicable questions are explicitly justified, not silently ignored.
-- **Depth:** Steps 4, 5, and 7 explain mechanisms, evidentiary support, and consequences sufficiently to judge the paper. No step is only a set of labels or an abstract paraphrase.
+- **Depth:** Steps 4, 5, and 7 explain mechanisms, evidentiary support, and consequences sufficiently to judge the paper.
+- **Reading process:** Apply the three passes, reconstruct central claim–evidence chains, and test core understanding before finalizing; never report incomplete work as verified. No step is only a set of labels or an abstract paraphrase.
 - **Traceability:** Each main contribution, decisive result, and consequential criticism has a real source pointer or is explicitly marked unverified.
 - **Faithfulness:** Reported metrics, quotations, assumptions, mathematical claims, and limitations match the accessible source. No invented figures, citations, experiments, references, or verification activity.
 - **Separation:** The paper's claims, supporting observations, agent interpretation, and independent critique are not conflated.

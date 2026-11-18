@@ -13,7 +13,8 @@ research-paper-reader/
  │ ├── templates/
  │ │ └── review-template.md # Shared final report format
  │ └── references/
- │ └── evaluation-checklist.md
+ │ ├── evaluation-checklist.md
+ │ └── reading-strategy.md
  └── paper-report-synthesizer/
  ├── SKILL.md
  └── references/
@@ -33,6 +34,8 @@ Runs the first three phases of SOP :
 - Phase 3: **Step 7 Critical Analysis, Step 8 Overall Assessment**
 
 Applicable to research papers across disciplines and research designs. No other model is required.
+
+**Internal reading process:** Three-Pass Reading → Claim–Evidence Reasoning Chain → Understanding Verification, documented in [reading-strategy.md](skills/research-paper-reader/references/reading-strategy.md). These checks do not change the eight-step final report structure.
 
 ## Skill 2 — [Paper Report Synthesizer](skills/paper-report-synthesizer/SKILL.md) (OPTIONAL)
 

@@ -43,7 +43,7 @@ research-paper-reader/
 - Phase 2: Step 4 Research Approach & Methodology; Step 5 Evidence & Results; Step 6 Discussion & Limitations
 - Phase 3: Step 7 Critical Analysis; Step 8 Overall Assessment
 
-Uses [Three-Pass Reading → Claim–Evidence Reasoning Chain → Understanding Verification](skills/research-paper-reader/references/reading-strategy.md) internally. It remains a complete, deep analysis, not the short final academic review.
+Uses [Three-Pass Reading → Claim–Evidence Reasoning Chain → Understanding Verification + Consistency/Recomputation Audit](skills/research-paper-reader/references/reading-strategy.md) internally. It remains a complete, deep analysis, not the short final academic review. Skill 1 adds source access/version recovery logs, figure inspection status, benchmark/dataset evaluation probes, reviewer-derived calculations and report-local evidence IDs. Its Markdown evidence audit is required; YAML/JSON export is optional.
 
 ## Skill 2 — [Paper Report Synthesizer](skills/paper-report-synthesizer/SKILL.md) (optional)
 
@@ -51,7 +51,7 @@ Uses [Three-Pass Reading → Claim–Evidence Reasoning Chain → Understanding 
 
 **Output:** One **unified detailed Paper Reading Report** in **exactly the same eight-step format** as Skill 1.
 
-Internally compares evidence, resolves disagreements and integrates complementary insights. No model-by-model breakdown, rankings or LLM-usage commentary appears in its final report. It continues to use [Skill 1's shared detailed report template](skills/research-paper-reader/templates/review-template.md).
+Internally compares evidence, resolves disagreements and integrates complementary insights. Claim IDs are local to each input report, so Skill 2 matches content and source evidence rather than assuming C1/F1 IDs align across models. No model-by-model breakdown, rankings or LLM-usage commentary appears in its final report. It continues to use [Skill 1's shared detailed report template](skills/research-paper-reader/templates/review-template.md).
 
 ## Skill 3 — [Academic Review Writer](skills/academic-review-writer/SKILL.md)
 

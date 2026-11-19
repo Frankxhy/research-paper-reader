@@ -57,7 +57,7 @@ Internally compares evidence, resolves disagreements and integrates complementar
 
 **Input:** One detailed report from **either Skill 1 or Skill 2**, preferably with the original paper for verification.
 
-**Output:** One **concise, evidence-preserving Academic Review** using the independent [six-section academic review template](skills/academic-review-writer/templates/academic-review-template.md), usually approximately 3–5 pages.
+**Output:** One **concise, evidence-preserving Academic Review** using the independent [six-section academic review template](skills/academic-review-writer/templates/academic-review-template.md), usually **1,000–1,200 English words** by default (unless a different length is requested or essential evidence requires more space).
 
 Skill 3 prioritizes findings, removes duplication, preserves citations and important caveats, and turns structured reading notes into coherent academic prose. It does **not** independently read a new paper, merge multiple detailed reports, or invent support for claims. See [writing standards](skills/academic-review-writer/references/writing-standards.md).
 

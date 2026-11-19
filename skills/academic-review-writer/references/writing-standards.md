@@ -2,6 +2,13 @@
 
 Use this reference to turn a detailed eight-step analysis into publication-style, evidence-aware prose without sacrificing its critical substance.
 
+## Default length and priorities
+
+- Target **1,000–1,200 English words** across the six review sections unless the user specifies a different length. The range is an editorial default, not a license to omit decisive evidence.
+- Preserve six sections in the required order. Allocate space by evidential importance, not equally across headings; methodology, key results, and substantive limitations generally warrant more space than generic context.
+- First remove repetition, exhaustive task/model inventories, secondary examples, complete leaderboards, and low-impact audit minutiae; keep a small number of decisive, well-contextualized metrics and critiques.
+- When a paper genuinely requires more words to preserve correctness or crucial uncertainty, prioritize fidelity over a rigid upper bound and make the excess purposeful. Never pad a focused review just to meet 1,000 words.
+
 ## Evidence-preserving compression
 
 - Keep the central research problem, claimed contributions, actual study design, decisive results, and most important strengths and weaknesses.
@@ -45,6 +52,6 @@ Use this reference to turn a detailed eight-step analysis into publication-style
 4. Are the decisive quantitative or formal details retained without distortions?
 5. Are important qualifications, uncertainty and verification limitations still visible?
 6. Does the review remain readable as one academic argument rather than a checklist?
-7. Is the requested length satisfied, with approximately 3–5 pages as the default target?
+7. Is the requested length satisfied, with **1,000–1,200 English words** as the default target (or is any justified exception essential for fidelity)?
 
 Only produce the final review, not this checklist.

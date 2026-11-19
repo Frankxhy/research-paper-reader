@@ -11,7 +11,7 @@ description: Synthesize two or more independent Research Paper Reader reports fo
 
 The final output must read like a single high-quality Paper Reading Report written by one reviewer. It must follow the same Universal Research Paper Reading SOP **Steps 1–8**, headings, order, level of detail, and claim-to-evidence audit as the primary skill's template at `../research-paper-reader/templates/review-template.md`.
 
-Do not add a separate comparison, model ranking, voting, provenance ledger, LLM-reflection appendix, synthesis methodology section, or "what each model said." Keep the work of comparison internal.
+Do not add a separate comparison, model ranking, voting, provenance ledger, LLM-reflection appendix, synthesis methodology section, or "what each model said." Keep the work of comparison internal. **Mandatory:** follow `references/conflict-and-coverage-protocol.md` for claim normalization, evidence-based resolution, unique-finding coverage, and narrowly targeted human escalation. The protocol is an internal check, not an extra output section.
 
 ## Inputs
 
@@ -27,14 +27,17 @@ Verify that all reports refer to the same paper/version. When they do not, flag 
 1. Extract content from each report into the **eight common SOP sections** (Overview; Background & Motivation; Contributions & Novelty; Research Approach & Methodology; Evidence & Results; Discussion & Limitations; Critical Analysis; Overall Assessment).
 2. Identify common findings, complementary details, contradictions, gaps, repeated unsupported claims, and distinct but potentially valid critiques. **Treat each report's C/F/S/W/R IDs as report-local; never align claims solely by identical identifiers.** Match by semantic content, exact paper/version location, experimental scope, metrics and evidentiary conditions.
 3. Evaluate each claim based on factual grounding, methodological soundness, and reasoning quality — not which model wrote it or how many models agreed.
-4. Maintain an internal claim matrix if useful. **Do not output the matrix.**
+4. Explicitly inspect **unique, material findings** from any single input; do not discard them on frequency grounds. Track an internal disposition for each important claim using the coverage protocol.
+5. Maintain an internal claim matrix if useful. **Do not output the matrix.**
 
 ### Step 10 — Internal evidence verification
 1. Validate the central claims and disagreements directly against the original paper wherever accessible, including figures, tables, equations, and appendices when relevant.
 2. Distinguish author claims, original evidence, **reviewer recomputations**, interpretations, and independent critiques. Independently check high-impact calculations (inputs, formulas, denominators and assumptions), and retain only derivations that withstand checking.
 3. Compare Source Access Logs and confirm which paper versions and sections each report actually inspected. Resolve discrepancies through evidence, checking mixed-version citations and any figure inspected only through its caption. When resolution is impossible, qualify or omit doubtful claims rather than average conflicting statements.
-4. Agreement is **not** evidence; do not turn repeated errors into confident claims.
-5. If the original source is unavailable, do not claim independent source verification; clearly mark unverified material in the corresponding report section/audit without discussing models.
+4. For material conflicts, apply the protocol's **Verified / Corrected / Unresolved / Not applicable** workflow states, resolving on source evidence, not agreement or self-reported model confidence. These internal states do not replace the shared report's existing audit statuses.
+5. Agreement is **not** evidence; do not turn repeated errors into confident claims.
+6. If the original source is unavailable, do not claim independent source verification; clearly mark unverified material in the corresponding report section/audit without discussing models.
+7. Escalate for **human verification** only when a consequential unresolved issue remains after reasonable checks and a specific human action could resolve it; flag the exact check within the existing report/audit rather than adding a separate section.
 
 ### Step 11 — Single-report synthesis
 1. Write **one complete report**, following the exact output template of Skill 1.
@@ -42,7 +45,8 @@ Verify that all reports refer to the same paper/version. When they do not, flag 
 3. Make each section coherent, not a collage of separate report excerpts. Use one consistent voice and terminology.
 4. Retain only paper-specific source citations that can be confirmed from the available paper. If a cited location exists only in an input report and has not been checked, mark it unverified.
 5. Treat paper type appropriately: theoretical work may be judged by proofs, qualitative work by methods and interpretive rigor, surveys by selection/synthesis, and so forth.
-6. Do not invent paper facts, external verification, experiments, citations, or personally performed procedures.
+6. Complete the **Synthesis Coverage Audit** before finalizing: each decisive/unique claim and high- or medium-severity critique must be included, meaningfully merged, excluded with an evidence-based rationale, or marked unresolved; retain this tracking internally.
+7. Do not invent paper facts, external verification, experiments, citations, or personally performed procedures.
 
 ## Mandatory final output contract
 
@@ -66,4 +70,4 @@ Use `../research-paper-reader/templates/review-template.md` as the **single sour
 
 If evidence is missing, say **Not verified** or explain the specific limitation in the relevant section or audit. The final deliverable remains a single unified paper review, not a comparison.
 
-See `references/synthesis-checklist.md` for internal safeguards.
+See `references/synthesis-checklist.md` and the mandatory `references/conflict-and-coverage-protocol.md` for internal safeguards.

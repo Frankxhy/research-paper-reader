@@ -1,5 +1,7 @@
 # Academic Review Critique Rubric
 
+Apply the mandatory `fidelity-and-coverage-protocol.md` before finalizing the critique.
+
 Evaluate the **review of the paper**, not the paper itself. Apply criteria proportional to study type, audience, and requested length. Each dimension needs evidence or a clear limit of verification. Do not convert a subjective checklist into a fictitious objective grade.
 
 ## 1. Factual accuracy and evidence fidelity (highest priority)
@@ -70,4 +72,4 @@ For each central claim in Skill 3, trace back to Skill 1/2's evidence audit. Com
 4. Effect of loss on meaning
 5. Revision needed and source confidence
 
-Summarize only material mismatches in final output rather than exposing a long full coverage matrix.
+Summarize only material mismatches in final output rather than exposing a long full coverage matrix. Specifically check numerical/metric context, author-claim vs critique boundaries, verified vs inherited citations, and consequential missing qualifiers. Audit whether high/medium upstream critiques or counterexamples are accurately represented or reasonably omitted for concision; classify concern vs demonstrated error before assigning severity.

@@ -25,20 +25,20 @@ Verify that all reports refer to the same paper/version. When they do not, flag 
 
 ### Step 9 — Internal multi-report analysis
 1. Extract content from each report into the **eight common SOP sections** (Overview; Background & Motivation; Contributions & Novelty; Research Approach & Methodology; Evidence & Results; Discussion & Limitations; Critical Analysis; Overall Assessment).
-2. Identify common findings, complementary details, contradictions, gaps, repeated unsupported claims, and distinct but potentially valid critiques.
+2. Identify common findings, complementary details, contradictions, gaps, repeated unsupported claims, and distinct but potentially valid critiques. **Treat each report's C/F/S/W/R IDs as report-local; never align claims solely by identical identifiers.** Match by semantic content, exact paper/version location, experimental scope, metrics and evidentiary conditions.
 3. Evaluate each claim based on factual grounding, methodological soundness, and reasoning quality — not which model wrote it or how many models agreed.
 4. Maintain an internal claim matrix if useful. **Do not output the matrix.**
 
 ### Step 10 — Internal evidence verification
 1. Validate the central claims and disagreements directly against the original paper wherever accessible, including figures, tables, equations, and appendices when relevant.
-2. Distinguish author claims, original evidence, interpretations, and independent critiques.
-3. Resolve discrepancies through evidence. When resolution is impossible, qualify or omit doubtful claims rather than average conflicting statements.
+2. Distinguish author claims, original evidence, **reviewer recomputations**, interpretations, and independent critiques. Independently check high-impact calculations (inputs, formulas, denominators and assumptions), and retain only derivations that withstand checking.
+3. Compare Source Access Logs and confirm which paper versions and sections each report actually inspected. Resolve discrepancies through evidence, checking mixed-version citations and any figure inspected only through its caption. When resolution is impossible, qualify or omit doubtful claims rather than average conflicting statements.
 4. Agreement is **not** evidence; do not turn repeated errors into confident claims.
 5. If the original source is unavailable, do not claim independent source verification; clearly mark unverified material in the corresponding report section/audit without discussing models.
 
 ### Step 11 — Single-report synthesis
 1. Write **one complete report**, following the exact output template of Skill 1.
-2. Combine complementary, well-supported insights, remove duplication, correct errors, and preserve useful nuanced critiques.
+2. Combine complementary, well-supported insights, remove duplication, correct errors, and preserve useful nuanced critiques. Preserve material critique severity (High/Medium/Low) and evidential status (Demonstrated/Concern/Unresolved) where supported; do not convert concerns into established defects.
 3. Make each section coherent, not a collage of separate report excerpts. Use one consistent voice and terminology.
 4. Retain only paper-specific source citations that can be confirmed from the available paper. If a cited location exists only in an input report and has not been checked, mark it unverified.
 5. Treat paper type appropriately: theoretical work may be judged by proofs, qualitative work by methods and interpretive rigor, surveys by selection/synthesis, and so forth.
@@ -52,7 +52,7 @@ Verify that all reports refer to the same paper/version. When they do not, flag 
 - Phase 1: Step 1 Overview; Step 2 Background & Motivation; Step 3 Contributions & Novelty
 - Phase 2: Step 4 Research Approach & Methodology; Step 5 Evidence & Results; Step 6 Discussion & Limitations
 - Phase 3: Step 7 Critical Analysis; Step 8 Overall Assessment
-- Claim-to-Evidence Audit and relevant limitations
+- Claim-to-Evidence Audit with report-local IDs, verification methods, source/version details, and relevant limitations; optional machine-readable export **only when requested**
 
 Use `../research-paper-reader/templates/review-template.md` as the **single source of truth** for the complete layout and subquestions. The synthesized report should be directly interchangeable with a report from Skill 1.
 

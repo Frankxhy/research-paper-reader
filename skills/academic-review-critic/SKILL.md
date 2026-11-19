@@ -11,7 +11,7 @@ description: Critically evaluate one concise Academic Review produced by academi
 
 This is **Skill 4**, a separate quality-assurance and editorial evaluation stage. Its subject is **the quality of the review produced by Skill 3**, not the original research paper's quality in isolation. Identify weaknesses and show how to fix them without losing the review's concise, scholarly character.
 
-Read `references/review-rubric.md` and `templates/critique-template.md` before running. Consult `../academic-review-writer/templates/academic-review-template.md` and `../academic-review-writer/references/writing-standards.md` if available to check the intended Skill 3 output contract.
+Read `references/review-rubric.md`, **`references/fidelity-and-coverage-protocol.md`**, and `templates/critique-template.md` before running. Consult `../academic-review-writer/templates/academic-review-template.md` and `../academic-review-writer/references/writing-standards.md` if available to check the intended Skill 3 output contract.
 
 ## Inputs
 
@@ -30,12 +30,13 @@ If upstream inputs are inaccessible, do not guess their contents or silently sub
 ## Evaluation workflow
 
 1. **Establish the target:** Identify the review's thesis, main contribution and intended audience, as well as any explicit word/page constraints. Confirm that it is the six-section Academic Review rather than the eight-step internal reading output.
-2. **Map retained claims:** Inspect the review's core problem, stated novelty, method, quantitative or formal findings, interpretation, limitations, and final judgment. For each high-stakes claim, check source support at the available verification level.
-3. **Evaluate using the rubric:** Assess factual fidelity and citation precision, coverage and prioritization, critical depth, methodology/results explanation, coherence and redundancy, scholarly clarity, and length proportionality. **Distinguish missing content that matters from detail intentionally omitted for concision.**
-4. **Detect issue patterns:** Examples include unsupported numerical assertions; model/task/metric mismatches; caveats removed during compression; repeated conclusions; generic strengths/weaknesses without evidence; criticism with no consequence explained; mismatch between cited section and statement; exaggerated novelty or causal claims.
-5. **Prioritize changes:** Label each specific finding as **Critical** (factual error/unfounded assertion), **Major** (substantial loss of evidence, reasoning, or important qualification), or **Minor** (presentation, flow, or minor repetition). Only assign a severity when supported. Rank by academic impact, not number of issues.
-6. **Make fixes actionable:** For each issue, identify (a) exact current review section and short excerpt or claim, (b) what is wrong or weak, (c) supporting evidence or limitation of verification, (d) a precise edit request, and (e) why it will improve the review.
-7. **Run a final audit:** Ensure each recommendation is supported, proportionate, nonduplicative, and implementable by Skill 3 with the given materials. Recheck that shortening does not erase necessary evidence or uncertainty.
+2. **Map retained claims and audit evidence fidelity:** Inspect the review's core problem, stated novelty, method, quantitative or formal findings, interpretation, limitations, and final judgment. For each high-stakes claim, trace its evidence and conditions at the available verification level using `references/fidelity-and-coverage-protocol.md`. Do not equate an inherited citation with direct verification.
+3. **Audit uncertainty and critical coverage:** Compare consequential qualifiers, source-version limits, important high/medium critiques, and counterexamples against the upstream report when available. Distinguish demonstrated defects from concerns, and justified compression from meaningful loss.
+4. **Evaluate using the rubric:** Assess factual fidelity and citation precision, coverage and prioritization, critical depth, methodology/results explanation, coherence and redundancy, scholarly clarity, and length proportionality. **Distinguish missing content that matters from detail intentionally omitted for concision.**
+5. **Detect issue patterns:** Examples include unsupported numerical assertions; model/task/metric mismatches; caveats removed during compression; repeated conclusions; generic strengths/weaknesses without evidence; criticism with no consequence explained; mismatch between cited section and statement; exaggerated novelty or causal claims.
+6. **Prioritize changes:** Label each specific finding as **Critical** (factual error/unfounded assertion), **Major** (substantial loss of evidence, reasoning, or important qualification), or **Minor** (presentation, flow, or minor repetition). Only assign a severity when supported. Rank by academic impact, not number of issues.
+7. **Make fixes actionable:** For each issue, identify (a) exact current review section and short excerpt or claim, (b) what is wrong or weak, (c) supporting evidence or limitation of verification, (d) a precise edit request, and (e) why it will improve the review.
+8. **Run a final audit:** Ensure each recommendation is supported, proportionate, nonduplicative, and implementable by Skill 3 with the given materials. Recheck that shortening does not erase necessary evidence or uncertainty; confirm the internal fidelity, uncertainty and critical-coverage audits are complete at the available verification level.
 
 ## Output contract
 

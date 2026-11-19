@@ -6,7 +6,7 @@
 
 **Paper version / source:** [Version, DOI or link when known]
 
-> **Template guidance (do not reproduce):** Produce cohesive scholarly prose, not a question-by-question worksheet. Default target: approximately 3–5 pages, adjustable to the paper and user's requirements. Preserve material original-paper citations and uncertainties; avoid unsupported claims. The six sections below are the final output format for Skill 3 and are intentionally different from Skill 1/2's eight-step detailed report.
+> **Template guidance (do not reproduce):** Produce cohesive scholarly prose, not a question-by-question worksheet. Default target: **1,000–1,200 English words across the six sections**, adjustable to the paper's evidentiary complexity and the user's explicit requirements. Keep all six sections; protect decisive findings, original-paper citations, methodological context and material uncertainty even when compressing. Preserve material original-paper citations and uncertainties; avoid unsupported claims. The six sections below are the final output format for Skill 3 and are intentionally different from Skill 1/2's eight-step detailed report.
 
 ## 1. Summary
 
@@ -36,6 +36,7 @@
 
 <!-- INTERNAL OUTPUT CHECK, DO NOT PRINT:
 - One review, six sections only
+- Default length 1,000–1,200 English words unless user specifies otherwise; evidence fidelity takes priority over a rigid limit
 - Compact but substantive prose; no forced 1.1-style headings
 - Each retained critical claim source-grounded and appropriately qualified
 - No claims that unseen paper figures or replication code were inspected
